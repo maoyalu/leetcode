@@ -1,6 +1,6 @@
 def solution(A, K):
 
-    # ********** Attempt 1 - 2019/09/17  **********
+    # ********** Attempt 2 - 2019/09/17  **********
 
     min_num = min(A)
     max_num = max(A)
