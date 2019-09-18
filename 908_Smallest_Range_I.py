@@ -1,3 +1,5 @@
+import unittest
+
 def solution(A, K):
 
     # ********** Attempt 2 - 2019/09/17  **********
@@ -30,7 +32,24 @@ def solution(A, K):
     # else:
     #     return 0
 
+class TestSolution(unittest.TestCase):
+    def test1(self):
+        A = [1]
+        K = 0
+        answer = 0
+        self.assertEqual(solution(A, K), answer)
+
+    def test2(self):
+        A = [0, 10]
+        K = 2
+        answer = 6
+        self.assertEqual(solution(A, K), answer)
+
+    def test3(self):
+        A = [1, 3, 6]
+        K = 3
+        answer = 0
+        self.assertEqual(solution(A, K), answer)
+
 if __name__ == "__main__":
-    assert(solution([1], 0) == 0)
-    assert(solution([0, 10], 2) == 6)
-    assert(solution([1, 3, 6], 3) == 0)
+    unittest.main()

@@ -1,9 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+import unittest
+from Utils.TreeNode import build_tree_node_from_list
 
 def solution(root1, root2):
     if not root1 and not root2:
@@ -17,5 +13,11 @@ def solution(root1, root2):
                 or (solution(root1.left, root2.left) \
                     and solution(root1.right, root2.right)))
 
+class TestSolution(unittest.TestCase):
+    def test1(self):
+        root1 = build_tree_node_from_list([1,2,3,4,5,6,None,None,None,7,8])
+        root2 = build_tree_node_from_list([1,3,2,None,6,4,5,None,None,None,None,8,7])
+        self.assertTrue(solution(root1, root2))
+
 if __name__ == "__main__":
-    pass
+    unittest.main()
