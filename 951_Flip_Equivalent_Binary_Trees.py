@@ -2,6 +2,9 @@ import unittest
 from Utils.TreeNode import build_tree_node_from_list
 
 def solution(root1, root2):
+
+    # ********** Attempt 1 - 2019/09/18  ********** 
+
     if not root1 and not root2:
         return True
     elif not root1 or not root2:
