@@ -4,6 +4,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 def build_tree_node_from_list(alist):
     if not alist:
         return None
