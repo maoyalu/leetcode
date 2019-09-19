@@ -2,6 +2,9 @@ import unittest
 
 
 def solution(candies):
+
+    # ********** Attempt 1 - 2019/09/19  ********** 
+    
     candies_num = len(candies) // 2
     kinds_num = len(set(candies))
     return min(candies_num, kinds_num)
