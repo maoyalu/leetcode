@@ -10,7 +10,7 @@ def solution(root):
     q = [root]
     while q:
         current = []
-        for i in range(len(q)):
+        for _ in range(len(q)):
             node = q.pop(0)
             if node:
                 current.append(node.val)
