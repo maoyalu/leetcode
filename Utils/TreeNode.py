@@ -18,12 +18,12 @@ def build_tree_node_from_list(alist):
         else:
             left = None
             right = None
-            if not alist[i]:
+            if alist[i]:
                 left = TreeNode(alist[i])
             queue.append(left)
             i += 1
             if i < len(alist):
-                if not alist[i]:
+                if alist[i]:
                     right = TreeNode(alist[i])
                 queue.append(right)
                 i += 1
