@@ -4,6 +4,9 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+    def __eq__(self, node):
+        return self.val == node.val and self.left == node.left and self.right == node.right
+
 
 def build_tree_node_from_list(alist):
     if not alist:
