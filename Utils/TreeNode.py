@@ -5,7 +5,11 @@ class TreeNode(object):
         self.right = None
 
     def __eq__(self, node):
-        return self.val == node.val and self.left == node.left and self.right == node.right
+        if self and node:
+            return self.val == node.val and self.left == node.left and self.right == node.right
+        else:
+            return False
+
 
 
 def build_tree_node_from_list(alist):
