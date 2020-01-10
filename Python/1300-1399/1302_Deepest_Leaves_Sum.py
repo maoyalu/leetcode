@@ -45,14 +45,7 @@ def solution(root):
 class TestSolution(unittest.TestCase):
     def test1(self):
         n = 234
-        out = 14
-        self.assertEqual(solution(n), out)
-
-    def test2(self):
-        n = 4421
-        out = 21
-        self.assertEqual(solution(n), out)
-
+        
 
 if __name__ == "__main__":
     unittest.main()
