@@ -9,12 +9,12 @@ def solution(s, num_rows):
         return s
     q = [[] for _ in range(num_rows)]
     i = 0
-    is_inc = False
+    is_down = False
     for c in s:
         q[i].append(c)
         if i == num_rows - 1 or i == 0:
-            is_inc = not is_inc
-        if is_inc:
+            is_down = not is_down
+        if is_down:
             i += 1
         else:
             i -= 1
